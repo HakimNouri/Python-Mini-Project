@@ -1,0 +1,21 @@
+# Plans
+plan*.md
+
+# Environment
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# Receipts (generated at runtime)
+receipts/*.txt
+
+# Pytest
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db

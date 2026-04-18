@@ -1,0 +1,6 @@
+pymongo>=4.7
+pyqt6>=6.7
+python-dotenv>=1.0
+bcrypt>=4.0
+pytest>=8.0
+matplotlib>=3.9
