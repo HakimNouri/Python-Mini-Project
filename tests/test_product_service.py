@@ -1,5 +1,6 @@
 import os
 import pytest
+from pymongo import ASCENDING
 
 os.environ.setdefault("MONGO_URI", "mongodb://localhost:27017")
 os.environ.setdefault("DB_NAME", "test_supermarket")
@@ -16,6 +17,7 @@ from src.services.product_service import (
 def clean_db():
     get_db()["products"].drop()
     get_db()["sales"].drop()
+    get_db()["products"].create_index([("code", ASCENDING)], unique=True)
     yield
     get_db()["products"].drop()
     get_db()["sales"].drop()
